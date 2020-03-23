@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="96dp"
+    android:orientation="horizontal"
+    android:padding="8dp">
+    <!--在层级相同时，FrameLayout 的性能略高于 LinearLayout，LinearLayout 又略高于RelativeLayout。对应的百分比布局同理。
+    约束布局能保证布局层级始终为 1，如果你的 item 很复杂，有必要考虑一下它。如果你不习惯拖拖拽拽，可以先写 XML 再转换。
+-->
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/item_daily_iv"
+        android:layout_width="80dp"
+        android:layout_height="80dp" />
+
+    <TextView
+        android:id="@+id/item_daily_tv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLines="3"
+        android:textSize="16sp" />
+
+</LinearLayout>
