@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.xiaowei.wpmvp.view.WaveView
+    <com.xiaowei.wpmvp.view.WaveView1
         android:id="@+id/waveView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
