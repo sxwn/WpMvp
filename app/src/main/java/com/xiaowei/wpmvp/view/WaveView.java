@@ -48,23 +48,20 @@ public class WaveView extends View {
         mHeight = MeasureUtils.measureView(heightMeasureSpec, 300);
         //水波的高度
         mWaveHeight = DensityUtil.dip2px(getContext(), 16);
-
     }
-
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
         drawWave(canvas);
     }
-
-
     private void drawWave(Canvas canvas) {
         Path path = new Path();
         path.reset();
+        // 贝塞尔曲线的起始点moveTo(x,y)
         path.moveTo(-mWaveDx + dx, mHeight / 2);
-        Log.e("weip",mWaveDx+"---"+getWidth());
+        Log.e("weip", mWaveDx + "---" + getWidth());
         for (int i = -mWaveDx; i < getWidth() + mWaveDx; i += mWaveDx) {
-            Log.e("weip","for");
+            Log.e("weip", "for");
             path.rQuadTo(mWaveDx / 4, -mWaveHeight, mWaveDx / 2, 0);
             path.rQuadTo(mWaveDx / 4, mWaveHeight, mWaveDx / 2, 0);
         }
@@ -84,7 +81,7 @@ public class WaveView extends View {
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 //水平方向的偏移量
-                dx = ( int ) animation.getAnimatedValue();
+                dx = (int) animation.getAnimatedValue();
                 invalidate();
             }
 
