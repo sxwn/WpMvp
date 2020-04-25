@@ -1,10 +1,7 @@
 package com.xiaowei.wpmvp;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
 
 import com.xiaowei.wpmvp.api.Api;
 import com.xiaowei.wpmvp.base.BaseMvpActivity;
@@ -14,6 +11,7 @@ import com.xiaowei.wpmvp.daily.DailyContract;
 import com.xiaowei.wpmvp.daily.DailyModelImpl;
 import com.xiaowei.wpmvp.daily.DailyPresenterImpl;
 import com.xiaowei.wpmvp.utils.DateUtil;
+import com.xiaowei.wpmvp.utils.NotificationUtil;
 
 import java.util.Date;
 import java.util.List;
@@ -34,6 +32,7 @@ public class MainActivity extends BaseMvpActivity<DailyPresenterImpl, DailyModel
         rcv.setLayoutManager(new LinearLayoutManager(this));
         rcv.setHasFixedSize(true);
         rcv.setAdapter(adapter);
+        NotificationUtil.getInstance(this).showNotification();
     }
 
     @Override
