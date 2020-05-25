@@ -1,0 +1,9 @@
+火车票---ibinder ---IWpPerson.Stub.saInterface(service);
+长沙 ---进站口 出站口 IWpPerson.addPerson ---进站口  proxy
+
+//火车出发 --- mRemote.transact(Stub.TRANSACTION_addPerson,_data,_reply,0);
+
+北京 ---进站口 出站口  stub.onTransact();
+
+实现任务： stub的实现类（服务的）
+
