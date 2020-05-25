@@ -7,3 +7,7 @@
 
 实现任务： stub的实现类（服务的）
 
+公共地方 --- 内核空间   --- c
+
+Client  --- bindService --- AMS --- scheduleBindService --- ApplicationThread
+C 发送数据       S C              S---服务端 ApplicationThread
