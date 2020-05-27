@@ -26,6 +26,8 @@ import androidx.appcompat.app.AppCompatActivity;
  * recycleview源码 viewpager源码  measurespec是干吗的  xml解析过程
  * 自定义view  布局，显示（cavans），事件分发   动手
  * glide源码:白屏、黑屏、图片加载缓存、缓存、网络层进行定制(ua),第一次加载所有配置的module，RequestManager网络层，工作线程，Options（300ms）
+ * application: onCreate():启动一个线程，异步线程，doAsync {Glide.get(getApplication()) //内部进行初始化操作 }
+ * 原理？  哪些初始化的东西，可以不初始化,  原理的理解，知识面
  * SplashActivity:广告图  glide加载  ，加载的时候无论是本地还是网络的，第一次使用的时候，这张图片加载都会很慢
  * okhttp请求源码:
  */
