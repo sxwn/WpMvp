@@ -13,6 +13,9 @@ import androidx.fragment.app.Fragment;
  * 懒加载
  * 可见-》不可见，一瞬间停止加载， 不可见-》可见，一瞬间加载
  * popupwindow不会影响你的生命周期，dialog也不会
+ * log -->click ---》进出了哪些界面--》模拟用户的行为---》profile mat：内存占用
+ * fragment: mContext Activity : 1M -> arrayList<Activity> ->内存泄漏
+ * JVM  GC  --- > NUll ,生命周期，
  */
 
 public abstract class LazyFragment extends Fragment {
