@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="WaveView">
-        <!--中间小船的图片-->
-        <attr name="imageBitmap" format="reference"></attr>
-        <!--水位是否要上升-->
-        <attr name="rise" format="boolean"></attr>
-        <!--水波纹向右移动的时候执行的时间-->
-        <attr name="duration" format="integer"></attr>
-        <!--起始点的Y坐标-->
-        <attr name="originY" format="integer"></attr>
-        <!--水波纹的高度-->
-        <attr name="waveHeight" format="integer"></attr>
-        <!--水波纹的长度-->
-        <attr name="waveLength" format="integer"></attr>
-
+        <attr name="waveWaterLevel" format="float" />
+        <attr name="amplitudeRatio" format="float" />
+        <attr name="waveLengthRatio" format="float" />
+        <attr name="waveShiftRatio" format="float" />
+        <attr name="frontWaveColor" format="color" />
+        <attr name="behindWaveColor" format="color" />
+        <attr name="waveShape" format="enum">
+            <enum name="circle" value="0" />
+            <enum name="square" value="1" />
+        </attr>
+        <attr name="showWave" format="boolean" />
     </declare-styleable>
-
 </resources>
